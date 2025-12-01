@@ -16,11 +16,19 @@ Site de login: https://doity.com.br
 
 ---
 
-## 🧾 Link com URLs para testes reais de resposta  
-Na raiz do repositório você encontrará um arquivo contendo links para simulações de respostas.
+## 🧾 Links para testes reais de resposta  
+No link abaixo você encontrará um arquivo contendo links para simulação de respostas da pesquisa:
 
 Download do arquivo:  
 https://mega.nz/file/8dc0ULha#5JDXjQqIBJGJI2EAJTXeHI7lyZXMqLMZ-c8RomAak8k
+
+Esse arquivo deve ser utilizado para acessar o formulário para responder a pesquisa
+
+---
+
+## 📹 Instruções em vídeo  
+- Vídeo 1: https://www.loom.com/share/e3d27ef081024fb68e710fa33f086e75  
+- Vídeo 2: https://www.loom.com/share/90569ea0774243fba6658e12dbea3e56  
 
 ---
 
