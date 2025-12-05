@@ -624,6 +624,7 @@ label.crop-label input {
 /*centralizar conteudo*/
 .__centered  {
     width: 100%;
+    
     /*max-width: 1000px;*/
     margin: 0 auto;
     position: relative;
@@ -691,6 +692,11 @@ label.crop-label input {
     left: 250px;
     top: 0;
     z-index: 100;
+}
+@media (min-width: 960px) {
+    .__headbar {
+        width: calc(100% - 250px);
+    }
 }
 
 .__headbar.imasters {
