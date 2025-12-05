@@ -29,6 +29,7 @@
 	<link rel="stylesheet" type="text/css" href="admin_responsive.css">
 	<link rel="stylesheet" type="text/css" href="font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="croppie.css">
+	<link rel="stylesheet" type="text/css" href="pesquisa.css">
 
 	
 	
@@ -918,91 +919,111 @@
     }
 </style>
 
-                                        <div style="width: 100%; max-width: 1366px; margin: 20px auto 0 auto;">
-                        
-<div class="pesquisa box">
-    
-    <form action="https://doity.com.br/admin/pesquisas/edit/1402" novalidate="novalidate" id="PesquisaAdminEditForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"><input type="hidden" name="data[_Token][key]" value="5a3c5a841c78b87ced00f2e0907d6b7bc46e8c517c789f1a3da6aa99bd4510b9f9cc401175324900a79bf924f1bb6cfee418594526a781b44ce490a8483d8a34" id="Token910137220"></div>    
-    <div class="title">
-        <h2>Configurações da Pesquisa de Satisfação</h2>
+<div style="width: 100%; max-width: 1366px; margin: 20px auto 0 auto;">
+
+    <div class="pesquisa box">
+        <form action="https://doity.com.br/admin/pesquisas/edit/1402" novalidate="novalidate" id="PesquisaAdminEditForm"
+            method="post" accept-charset="utf-8">
+            <div style="display:none;"><input type="hidden" name="_method" value="POST"><input type="hidden"
+                    name="data[_Token][key]"
+                    value="5a3c5a841c78b87ced00f2e0907d6b7bc46e8c517c789f1a3da6aa99bd4510b9f9cc401175324900a79bf924f1bb6cfee418594526a781b44ce490a8483d8a34"
+                    id="Token910137220"></div>
+            <div class="title">
+                <h2>Configurações da Pesquisa de Satisfação</h2>
+            </div>
+
+            <div class="content forms config_pesquisa">
+
+                <div class="mensagem">
+                </div>
+
+                <input type="hidden" name="data[Pesquisa][id]" value="1402" id="PesquisaId">
+                <div class="input text required"><label for="PesquisaNome" class="required">Nome</label><input
+                        name="data[Pesquisa][nome]" maxlength="255" type="text" id="PesquisaNome" required="required" value="Pesquisa de Qualidade do Evento">
+                </div>
+                <div class="input textarea"><label for="PesquisaDescricao" class="required">Descrição</label>
+                    <textarea name="data[Pesquisa][descricao]" class="ckeditor" cols="30" rows="6" id="PesquisaDescricao">&lt;p&gt;Queremos saber como foi a sua experi&amp;ecirc;ncia neste evento. Suas respostas nos ajudar&amp;atilde;o a melhorar continuamente a organiza&amp;ccedil;&amp;atilde;o, o conte&amp;uacute;do e a qualidade dos pr&amp;oacute;ximos encontros. Obrigado por dedicar alguns minutos para contribuir com seu feedback!&lt;/p&gt;
+                    </textarea></div>
+
+
+                <div class="periodo-group">
+                    <div class="input text required"><label class="periodo-title">Período</label>
+                        <div class="periodo-fields">
+                            <div class="input text required periodo-item">
+                                <input name="data[Pesquisa][data_disponivel]" placeholder="Data de início" type="text"
+                                    id="PesquisaDataDisponivel" required="required" aria-label="Data de início">
+                            </div>
+
+                            <div class="input text required periodo-item">
+                                <input name="data[Pesquisa][data_termino]" placeholder="Data de término" type="text"
+                                    id="PesquisaDataTermino" required="required" aria-label="Data de término">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input checkbox"><input type="hidden" name="data[Pesquisa][ativo]" id="PesquisaAtivo_"
+                        value="0"><input type="checkbox" name="data[Pesquisa][ativo]" value="1"
+                        id="PesquisaAtivo"><label for="PesquisaAtivo">Disponível</label>
+                </div>
+
+
+                <div class="opcoes_enviar_para">
+                    <fieldset>
+                        <legend>Enviar pesquisa para</legend>
+                        <span class="radio-item">
+                            <input type="radio" name="data[Pesquisa][enviar_para]" id="PesquisaEnviarPara0" value="0" required="required">
+                            <label for="PesquisaEnviarPara0">Todos confirmados</label>
+                        </span>
+                        <span class="radio-item">
+
+                            <input type="radio" name="data[Pesquisa][enviar_para]" id="PesquisaEnviarPara1" value="1" required="required">
+                            <label for="PesquisaEnviarPara1">Só credenciados</label>
+                        </span>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="row buttons">
+                <div class="cancel">
+                    <a href="https://doity.com.br/admin/pesquisas/index/279481">Cancelar</a>
+                </div>
+                <div style="display:none;"><input type="hidden" name="data[_Token][fields]"
+                        value="0642377622d3dff524d176deee4d3237a42b40ba%3APesquisa.id" id="TokenFields218289597"><input
+                        type="hidden" name="data[_Token][unlocked]" value="" id="TokenUnlocked757847620"></div>
+                <div class="submit"><input type="submit" value="Salvar"></div>
+            </div>
+
+        </form>
     </div>
 
-        <div class="content forms config_pesquisa">
-            
-            <div class="mensagem">
-                            </div>
-            
-            <input type="hidden" name="data[Pesquisa][id]" value="1402" id="PesquisaId"><div class="input text required"><label for="PesquisaNome">Nome da pesquisa*</label><input name="data[Pesquisa][nome]" value="Pesquisa de Qualidade do Evento" maxlength="255" type="text" id="PesquisaNome" required="required"></div><div class="input textarea"><label for="PesquisaDescricao">Descrição da pesquisa</label><textarea name="data[Pesquisa][descricao]" class="ckeditor" cols="30" rows="6" id="PesquisaDescricao">&lt;p&gt;Queremos saber como foi a sua experi&amp;ecirc;ncia neste evento. Suas respostas nos ajudar&amp;atilde;o a melhorar continuamente a organiza&amp;ccedil;&amp;atilde;o, o conte&amp;uacute;do e a qualidade dos pr&amp;oacute;ximos encontros. Obrigado por dedicar alguns minutos para contribuir com seu feedback!&lt;/p&gt;
-</textarea></div><div class="input text required"><label for="PesquisaDataDisponivel">Data de início da pesquisa*</label><input name="data[Pesquisa][data_disponivel]" value="01/12/2025" type="text" id="PesquisaDataDisponivel" required="required"></div><div class="input text required"><label for="PesquisaDataTermino">Data término da pesquisa*</label><input name="data[Pesquisa][data_termino]" value="31/12/2025" type="text" id="PesquisaDataTermino" required="required"></div><div class="input checkbox"><input type="hidden" name="data[Pesquisa][ativo]" id="PesquisaAtivo_" value="0"><input type="checkbox" name="data[Pesquisa][ativo]" checked="checked" value="1" id="PesquisaAtivo"><label for="PesquisaAtivo">Disponível</label></div>                
-                 <div class="opcoes_enviar_para">
-	            	<fieldset><legend>Enviar pesquisa para*</legend><input type="radio" name="data[Pesquisa][enviar_para]" id="PesquisaEnviarPara1" value="1" required="required"><label for="PesquisaEnviarPara1">Só credenciados</label><input type="radio" name="data[Pesquisa][enviar_para]" id="PesquisaEnviarPara0" value="0" checked="checked" required="required"><label for="PesquisaEnviarPara0">Todos confirmados</label></fieldset>				</div>
-        </div>
-    </form></div>
-       
-<div class="clear"></div>
-    
-<div class="row buttons" style="margin-left: 20px;">
-    <div class="submit"><input type="submit" value="Alterar"></div><div style="display:none;"><input type="hidden" name="data[_Token][fields]" value="0642377622d3dff524d176deee4d3237a42b40ba%3APesquisa.id" id="TokenFields218289597"><input type="hidden" name="data[_Token][unlocked]" value="" id="TokenUnlocked757847620"></div>    <div class="cancel">
-        <a href="https://doity.com.br/admin/pesquisas/index/279481">Cancelar</a>    </div>
-</div>
-    
 
-
-
-
-<style type="text/css">
+    <style type="text/css">
         .box .title {
-        background: none;
-        padding: 0px 0px 0px 15px;
-    }
-    .forms .input {
-        border: none;
-    }
-    .forms .input input {
-        background: none;
-        padding: 5px;
-    }
-    .mensagem {
-        margin: 20px 20px 0 20px;
-    }
-    
-	#PesquisaAtivo {
-		float:left; 
-		margin-right:0 
-	}
-	
-	.config_pesquisa .checkbox {
-	    margin-left: -4px;
-	}
-	
-		
-	.config_pesquisa input[type="radio"] {
-		
-		margin: 1px -1px 0px;
-		float: left;
-	}
-	
-	.opcoes_enviar_para label {
-		float: left;
-		margin-right: 10px;
-		margin-left: 10px;
-	}
-	
-	.opcoes_enviar_para {
-		margin-top: -5px;
-	}
-		
-	.opcoes_enviar_para legend{
-		margin-bottom: 1px;
-		font-weight: bold;
-		color: rgb(28, 28, 28);
-		margin-left: 1px;
-	}
+            background: none;
+            padding: 0px 0px 0px 15px;
+        }
+
+        .forms .input {
+            border: none;
+        }
+
+        .forms .input input {
+            background: none;
+            padding: 5px;
+        }
+
+        .mensagem {
+            margin: 20px 20px 0 20px;
+        }
+
         .mensagem {
             margin: 10px 0 0 0;
         }
-
-</style>	                    </div>
+    </style>
+</div>
                     <div class="footer">
                         <div id="footer">
     
