@@ -14,8 +14,31 @@ label.required::after {
 
 .periodo-item {
     flex: 1;
-    padding: 0 !important;
+    position: relative;
 }
+
+.date-input {
+    width: 100%;
+    padding-right: 35px;
+}
+
+.calendar-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+}
+
+.real-date {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+}
+
 
 /* Check box */
 .input.checkbox input[type="checkbox"] {
@@ -191,4 +214,47 @@ label.required::after {
 
 .row.buttons .cancel:only-child {
     margin-left: auto;
+}
+
+@media (max-width: 600px) {
+    /* Periodo */
+    .periodo-fields {
+        width: 100%;
+    }
+    .row.buttons {
+        display: flex !important;
+        gap: 12px !important;
+        justify-content: stretch !important;
+        align-items: stretch !important;
+        border-top: 1px solid #eee;
+        padding-top: 12px;
+    }
+
+    /* Botoes Formulario */
+    .row.buttons > div[style*="display:none"] {
+        display: none !important;
+    }
+
+    .row.buttons .submit,
+    .row.buttons .cancel {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+    }
+
+    .row.buttons .cancel a,
+    .row.buttons .submit input[type="submit"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .row.buttons > div:not([style*="display:none"]):only-child {
+        flex: 1 0 100% !important;
+    }
 }

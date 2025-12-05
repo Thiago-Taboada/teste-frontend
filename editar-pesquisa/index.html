@@ -942,29 +942,60 @@
                         name="data[Pesquisa][nome]" maxlength="255" type="text" id="PesquisaNome" required="required" value="Pesquisa de Qualidade do Evento">
                 </div>
                 <div class="input textarea"><label for="PesquisaDescricao" class="required">Descrição</label>
-                    <textarea name="data[Pesquisa][descricao]" class="ckeditor" cols="30" rows="6" id="PesquisaDescricao">&lt;p&gt;Queremos saber como foi a sua experi&amp;ecirc;ncia neste evento. Suas respostas nos ajudar&amp;atilde;o a melhorar continuamente a organiza&amp;ccedil;&amp;atilde;o, o conte&amp;uacute;do e a qualidade dos pr&amp;oacute;ximos encontros. Obrigado por dedicar alguns minutos para contribuir com seu feedback!&lt;/p&gt;
-                    </textarea></div>
-
+                    <textarea name="data[Pesquisa][descricao]" class="ckeditor" cols="30" rows="6" id="PesquisaDescricao">Queremos saber como foi a sua experiência neste evento. Suas respostas nos ajudarão a melhorar continuamente a organização, o conteúdo e a qualidade dos próximos encontros. Obrigado por dedicar alguns minutos para contribuir com seu feedback!
+                    </textarea>
+                </div>
 
                 <div class="periodo-group">
-                    <div class="input text required"><label class="periodo-title">Período</label>
+                    <div class="input text required">
+                        <label class="periodo-title">Período</label>
+
                         <div class="periodo-fields">
-                            <div class="input text required periodo-item">
-                                <input name="data[Pesquisa][data_disponivel]" placeholder="Data de início" type="text"
-                                    id="PesquisaDataDisponivel" required="required" aria-label="Data de início">
+
+                            <div class="periodo-item">
+                                <input name="data[Pesquisa][data_disponivel]"
+                                    placeholder="Data de início"
+                                    value="01/12/2025"
+                                    type="text"
+                                    id="PesquisaDataDisponivel"
+                                    class="date-input"
+                                    inputmode="numeric"
+                                    maxlength="10"
+                                    aria-label="Data de início">
+
+                                <input type="date" class="real-date" id="RealDataInicio">
+
+                                <i class="fa fa-calendar calendar-icon"
+                                onclick="openRealDate('RealDataInicio','PesquisaDataDisponivel')"></i>
                             </div>
 
-                            <div class="input text required periodo-item">
-                                <input name="data[Pesquisa][data_termino]" placeholder="Data de término" type="text"
-                                    id="PesquisaDataTermino" required="required" aria-label="Data de término">
+                            <div class="periodo-item">
+                                <input name="data[Pesquisa][data_termino]"
+                                    placeholder="Data de término"
+                                    value="31/12/2025"
+                                    type="text"
+                                    id="PesquisaDataTermino"
+                                    class="date-input"
+                                    inputmode="numeric"
+                                    maxlength="10"
+                                    aria-label="Data de término">
+
+                                <!-- input date oculto -->
+                                <input type="date" class="real-date" id="RealDataTermino">
+
+                                <i class="fa fa-calendar calendar-icon"
+                                onclick="openRealDate('RealDataTermino','PesquisaDataTermino')"></i>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
-                <div class="input checkbox"><input type="hidden" name="data[Pesquisa][ativo]" id="PesquisaAtivo_"
-                        value="0"><input type="checkbox" name="data[Pesquisa][ativo]" value="1"
-                        id="PesquisaAtivo"><label for="PesquisaAtivo">Disponível</label>
+
+
+                <div class="input checkbox">
+                    <input type="hidden" name="data[Pesquisa][ativo]" id="PesquisaAtivo_" value="0">
+                    <input type="checkbox" name="data[Pesquisa][ativo]" value="1" checked="checked" id="PesquisaAtivo"><label for="PesquisaAtivo">Disponível</label>
                 </div>
 
 
@@ -977,7 +1008,7 @@
                         </span>
                         <span class="radio-item">
 
-                            <input type="radio" name="data[Pesquisa][enviar_para]" id="PesquisaEnviarPara1" value="1" required="required">
+                            <input type="radio" name="data[Pesquisa][enviar_para]" id="PesquisaEnviarPara1" value="1" checked="checked" required="required">
                             <label for="PesquisaEnviarPara1">Só credenciados</label>
                         </span>
                     </fieldset>
@@ -1180,5 +1211,5 @@
         padding-top: 0 !important;
     }
 </style>
-
+<script src="pesquisa.js"></script>
 </body></html>
