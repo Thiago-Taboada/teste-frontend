@@ -2456,13 +2456,17 @@ Add a counter to the multi-steps indicator
 
 .ds-btn-bordered {
   border: 1px solid white;
-  border-radius: 30px;
   display: inline-block;
   padding: 8px 30px;
   color: #fff;
   text-decoration: none;
   text-align: center;
   transition: 123ms all;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 .ds-btn-bordered:hover {
   background-color: white;
