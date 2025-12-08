@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="admin_responsive.css">
     <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="croppie.css">
+    <link rel="stylesheet" type="text/css" href="modal.css">
 
 
 
@@ -1093,32 +1094,45 @@
 
                                 <div class="mensagem">
                                 </div>
-                                <div class="actions">
-                                    <ul>
-                                        <li><a href="https://doity.com.br/admin/pesquisas_perguntas/add/1402">Adicionar
-                                                pergunta</a></li>
-                                        <li><a href="https://doity.com.br/admin/pesquisas_resultados/index/1402">Resultados
-                                                da pesquisa de satisfação</a></li>
 
-                                    </ul>
+                                <div class="resumo-pesquisa">
+                                    <h2 class="titulo-pesquisa">Nome da Pesquisa</h2>
+                                    <div class="linha-inferior">
+                                        <div class="linha-info">
+                                            <div class="item-info">
+                                                <span class="label">Data</span>
+                                                <span class="valor"><strong>16/02/2025</strong></span>
+                                            </div>
+
+                                            <div class="divider"></div>
+
+                                            <div class="item-info">
+                                                <span class="label">Enviar pesquisa para:</span>
+                                                <span class="valor"><strong>Só participantes
+                                                        credenciados</strong></span>
+                                            </div>
+
+                                            <div class="divider"></div>
+
+                                            <div class="status-pesquisa status-pesquisa-ok">
+                                                <span class="bolinha-pesquisa status-pesquisa-ok"></span>
+                                                <span class="texto-status-pesquisa status-pesquisa-ok">Disponível</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="botoes-resumo">
+                                            <a href="../editar-pesquisa/" class="botao-resumo">Editar</a>
+                                            <a href="../preview/" target="_blank"
+                                                class="botao-resumo">Pré-visualizar</a>
+                                        </div>
+                                    </div>
+
                                 </div>
 
-                                <div class="painel-info-artigos">
-                                    <p>Nome: <strong>Pesquisa de Qualidade do Evento</strong></p>
-                                    <p>Data de disponibilidade: <strong>01/12/2025</strong></p>
-                                    <p>Disponível: <strong>Sim</strong></p>
-                                    <p>Enviar pesquisa para: <strong>Todos confirmados</strong></p>
 
-                                    <p class="painel-p">
-                                        <a href="https://doity.com.br/admin/pesquisas/edit/1402">Editar informações</a>
-                                    </p>
+                                <div class="perguntas-pesquisa">
 
-                                    <p class="painel-p">
-                                        <a href="https://doity.com.br/admin/pesquisas/preview/1402"
-                                            target="_blank">Pré-visualizar</a>
-                                    </p>
                                 </div>
-
                                 <h1>Perguntas</h1>
                                 <table class="table-resp">
                                     <thead>
@@ -1236,7 +1250,7 @@
                             </div>
 
                         </div>
-                        
+
 
                         <!-- MENSAGEM PERGUNTANDO SE DESEJA ENVIAR PARA E-MAIL PARA OS PARTICIPANTES INFORMANDO QUE O CERTIFICADO ESTÁ LIBERADO -->
                         <div id="container">
@@ -1265,8 +1279,9 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-left: auto;">
-                        <a href="#" data-toggle="tooltip" title="Pesquisa já enviada." class="link_desabilitado botao-geral submit">
+                    <div style="width: 100%; max-width: 1366px; margin: 0 auto; display: flex; justify-content: end;">
+                        <!-- <a href="#" data-toggle="tooltip" title="Pesquisa já enviada." class="link_desabilitado botao-geral submit"> -->
+                        <a href="#" data-toggle="tooltip" title="Pesquisa já enviada." class="botao-geral submit">
                             Enviar pesquisa
                         </a>
                     </div>
@@ -1436,6 +1451,61 @@
             padding-top: 0 !important;
         }
     </style>
+
+    <div id="modal-aviso" class="modal-overlay" style="display: none;">
+        <div class="modal-box">
+            <button class="fechar-modal">&times;</button>
+
+            <div class="modal-body">
+                <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+
+
+
+                <strong class="titulo-modal">
+                    Atenção: Você só poderá enviar essa pesquisa uma vez.
+                </strong>
+
+                <p class="subtitulo-modal">
+                    Conforme você configurou, ela será enviada para todos os confirmados no evento.
+                </p>
+
+                <div class="modal-botoes">
+                    <button class="botao-geral">Cancelar</button>
+                    <button class="botao-geral submit">Enviar pesquisa</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnEnviar = document.querySelector('.botao-geral.submit');
+            const modal = document.getElementById('modal-aviso');
+            const modalClose = modal.querySelector('.fechar-modal');
+
+            const btnInternoCancelar = modal.querySelector('.modal-botoes .botao-geral:not(.submit)');
+            const btnInternoEnviar = modal.querySelector('.modal-botoes .submit');
+
+            const hideModal = () => modal.classList.remove('show');
+            const showModal = () => modal.classList.add('show');
+
+            btnEnviar.addEventListener('click', function (event) {
+                event.preventDefault();
+                showModal();
+            });
+
+            modalClose.addEventListener('click', hideModal);
+
+            modal.addEventListener('click', function (e) {
+                if (e.target === modal) hideModal();
+            });
+
+            btnInternoCancelar.addEventListener('click', hideModal);
+            btnInternoEnviar.addEventListener('click', hideModal);
+        });
+
+    </script>
 
 </body>
 
