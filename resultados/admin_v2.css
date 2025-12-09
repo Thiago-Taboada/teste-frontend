@@ -4310,6 +4310,132 @@ table:not(.dataTable) {
   background: rgba(0,0,0,0.01);
 }
 
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    font-family: Arial, sans-serif;
+}
+
+.card-avaliacao {
+    background: #F6F6F6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-header .numero{
+    font-weight: 700;
+    color: #18181B;
+    font-size: 12px;
+}
+
+.card-header .left {
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+}
+
+.pergunta {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.percent-wrapper {
+    text-align: right;
+}
+
+.percentual {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.tag-resultado {
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 5px;
+    width: 100%;
+    text-align: center;
+    border-radius: 33px;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    -ms-border-radius: 33px;
+    -o-border-radius: 33px;
+}
+
+.linhas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 40% auto;
+    align-items: center;
+    gap: 10px;
+}
+
+.barra {
+    height: 11px;
+    background: #D9D9D9;
+    overflow: hidden;
+    position: relative;
+    border-radius: 55px;
+    -webkit-border-radius: 55px;
+    -moz-border-radius: 55px;
+    -ms-border-radius: 55px;
+    -o-border-radius: 55px;
+}
+
+.fill {
+    height: 100%;
+    width: 0;
+    border-radius: 55px;
+    -webkit-border-radius: 55px;
+    -moz-border-radius: 55px;
+    -ms-border-radius: 55px;
+    -o-border-radius: 55px;
+}
+
+.label-card {
+    text-align: right;
+    width: 100%;
+    font-size: 12px;
+}
+
+.label-card .value{
+    font-weight: 700;
+    color: #18181B;
+}
+
+
+/* Paleta Cards */
+.excelente { background: #66BB33; }
+.bom       { background: #C5C772; }
+.regular   { background: #DFAD40; }
+.ruim      { background: #E66699; }
+.pessimo   { background: #FF2B34; }
+
 @media (max-width: 680px) {
 
     .linha-inferior {
@@ -4338,6 +4464,10 @@ table:not(.dataTable) {
     .botao-resumo {
         flex: 1;
         text-align: center;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
     }
 
     .comentarios-table-cell { 

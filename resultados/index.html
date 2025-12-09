@@ -1160,192 +1160,290 @@
 
                                 </div>
 
+                                <div class="cards-container">
+                                    <div class="card-avaliacao" 
+                                        data-excelente="61" 
+                                        data-bom="11" 
+                                        data-regular="8" 
+                                        data-ruim="0" 
+                                        data-pessimo="5">
 
-                                <div id="graficos_pesquisa">
+                                        <div class="card-header">
+                                            <div class="left">
+                                                <p class="numero">01</p>
+                                                <p class="pergunta">Você gostou da apresentação do participante x?</p>
+                                            </div>
 
-                                    <script type="text/javascript"
-                                        src='https://www.google.com/jsapi?autoload={"modules":[{"name":"visualization","version":"1.1","packages":["corechart"]}]}'></script>
+                                            <div class="percent-wrapper">
+                                                <p class="percentual"></p>
+                                                <span class="tag-resultado"></span>
+                                            </div>
+                                        </div>
 
-                                    <div id="content-grafico">
-                                        <h1>1 - Como você avaliaria sua experiência geral no evento?</h1>
-                                        <div id="piechart1" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
+                                        <div class="linhas">
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill excelente"></div></div>
+                                                <span class="label-card">Excelente <span class="value"></span></span>
+                                            </div>
 
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 0], ["Ruim", 0], ["Razo\u00e1vel", 1], ["Bom", 0], ["Excelente", 3]]);
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill bom"></div></div>
+                                                <span class="label-card">Bom <span class="value"></span></span>
+                                            </div>
 
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill regular"></div></div>
+                                                <span class="label-card">Regular <span class="value"></span></span>
+                                            </div>
 
-                                                };
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill ruim"></div></div>
+                                                <span class="label-card">Ruim <span class="value"></span></span>
+                                            </div>
 
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 1));
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill pessimo"></div></div>
+                                                <span class="label-card">Péssimo <span class="value"></span></span>
+                                            </div>
 
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
-
+                                        </div>
                                     </div>
-                                    <div id="content-grafico">
-                                        <h1>2 - O conteúdo apresentado foi relevante para você?</h1>
-                                        <div id="piechart2" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
+                                    <div class="card-avaliacao" 
+                                        data-excelente="29" 
+                                        data-bom="36" 
+                                        data-regular="12" 
+                                        data-ruim="7" 
+                                        data-pessimo="0">
 
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 0], ["Ruim", 1], ["Razo\u00e1vel", 2], ["Bom", 0], ["Excelente", 1]]);
+                                        <div class="card-header">
+                                            <div class="left">
+                                                <p class="numero">02</p>
+                                                <p class="pergunta">Você gostou da apresentação do participante x?</p>
+                                            </div>
 
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
+                                            <div class="percent-wrapper">
+                                                <p class="percentual"></p>
+                                                <span class="tag-resultado"></span>
+                                            </div>
+                                        </div>
 
-                                                };
+                                        <div class="linhas">
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill excelente"></div></div>
+                                                <span class="label-card">Excelente <span class="value"></span></span>
+                                            </div>
 
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 2));
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill bom"></div></div>
+                                                <span class="label-card">Bom <span class="value"></span></span>
+                                            </div>
 
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill regular"></div></div>
+                                                <span class="label-card">Regular <span class="value"></span></span>
+                                            </div>
 
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill ruim"></div></div>
+                                                <span class="label-card">Ruim <span class="value"></span></span>
+                                            </div>
+
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill pessimo"></div></div>
+                                                <span class="label-card">Péssimo <span class="value"></span></span>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div id="content-grafico">
-                                        <h1>3 - A qualidade dos palestrantes foi satisfatória?</h1>
-                                        <div id="piechart3" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
+                                    <div class="card-avaliacao" 
+                                        data-excelente="9" 
+                                        data-bom="7" 
+                                        data-regular="6" 
+                                        data-ruim="16" 
+                                        data-pessimo="39">
 
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 0], ["Ruim", 1], ["Razo\u00e1vel", 2], ["Bom", 0], ["Excelente", 1]]);
+                                        <div class="card-header">
+                                            <div class="left">
+                                                <p class="numero">03</p>
+                                                <p class="pergunta">Você gostou da apresentação do participante x?</p>
+                                            </div>
 
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
+                                            <div class="percent-wrapper">
+                                                <p class="percentual"></p>
+                                                <span class="tag-resultado"></span>
+                                            </div>
+                                        </div>
 
-                                                };
+                                        <div class="linhas">
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill excelente"></div></div>
+                                                <span class="label-card">Excelente <span class="value"></span></span>
+                                            </div>
 
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 3));
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill bom"></div></div>
+                                                <span class="label-card">Bom <span class="value"></span></span>
+                                            </div>
 
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill regular"></div></div>
+                                                <span class="label-card">Regular <span class="value"></span></span>
+                                            </div>
 
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill ruim"></div></div>
+                                                <span class="label-card">Ruim <span class="value"></span></span>
+                                            </div>
+
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill pessimo"></div></div>
+                                                <span class="label-card">Péssimo <span class="value"></span></span>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div id="content-grafico">
-                                        <h1>4 - Como você avalia a organização do evento?</h1>
-                                        <div id="piechart4" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
+                                    <div class="card-avaliacao" 
+                                        data-excelente="32" 
+                                        data-bom="36" 
+                                        data-regular="16" 
+                                        data-ruim="6" 
+                                        data-pessimo="5">
 
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 2], ["Ruim", 0], ["Razo\u00e1vel", 1], ["Bom", 0], ["Excelente", 1]]);
+                                        <div class="card-header">
+                                            <div class="left">
+                                                <p class="numero">04</p>
+                                                <p class="pergunta">Você gostou da apresentação do participante x?</p>
+                                            </div>
 
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
+                                            <div class="percent-wrapper">
+                                                <p class="percentual"></p>
+                                                <span class="tag-resultado"></span>
+                                            </div>
+                                        </div>
 
-                                                };
+                                        <div class="linhas">
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill excelente"></div></div>
+                                                <span class="label-card">Excelente <span class="value"></span></span>
+                                            </div>
 
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 4));
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill bom"></div></div>
+                                                <span class="label-card">Bom <span class="value"></span></span>
+                                            </div>
 
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill regular"></div></div>
+                                                <span class="label-card">Regular <span class="value"></span></span>
+                                            </div>
 
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill ruim"></div></div>
+                                                <span class="label-card">Ruim <span class="value"></span></span>
+                                            </div>
+
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill pessimo"></div></div>
+                                                <span class="label-card">Péssimo <span class="value"></span></span>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div id="content-grafico">
-                                        <h1>5 - Pergunta exemplo</h1>
-                                        <div id="piechart5" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
+                                    <div class="card-avaliacao" 
+                                        data-excelente="29" 
+                                        data-bom="8" 
+                                        data-regular="15" 
+                                        data-ruim="62" 
+                                        data-pessimo="19">
 
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 0], ["Ruim", 1], ["Razo\u00e1vel", 0], ["Bom", 1], ["Excelente", 2]]);
+                                        <div class="card-header">
+                                            <div class="left">
+                                                <p class="numero">05</p>
+                                                <p class="pergunta">Você gostou da apresentação do participante x?</p>
+                                            </div>
 
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
+                                            <div class="percent-wrapper">
+                                                <p class="percentual"></p>
+                                                <span class="tag-resultado"></span>
+                                            </div>
+                                        </div>
 
-                                                };
+                                        <div class="linhas">
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill excelente"></div></div>
+                                                <span class="label-card">Excelente <span class="value"></span></span>
+                                            </div>
 
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 5));
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill bom"></div></div>
+                                                <span class="label-card">Bom <span class="value"></span></span>
+                                            </div>
 
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill regular"></div></div>
+                                                <span class="label-card">Regular <span class="value"></span></span>
+                                            </div>
 
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill ruim"></div></div>
+                                                <span class="label-card">Ruim <span class="value"></span></span>
+                                            </div>
+
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill pessimo"></div></div>
+                                                <span class="label-card">Péssimo <span class="value"></span></span>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <div id="content-grafico">
-                                        <h1>6 - Teste</h1>
-                                        <div id="piechart6" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
+                                    <div class="card-avaliacao" 
+                                        data-excelente="86" 
+                                        data-bom="22" 
+                                        data-regular="64" 
+                                        data-ruim="14" 
+                                        data-pessimo="9">
 
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 1], ["Ruim", 0], ["Razo\u00e1vel", 1], ["Bom", 0], ["Excelente", 1]]);
+                                        <div class="card-header">
+                                            <div class="left">
+                                                <p class="numero">06</p>
+                                                <p class="pergunta">Você gostou da apresentação do participante x?</p>
+                                            </div>
 
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
+                                            <div class="percent-wrapper">
+                                                <p class="percentual"></p>
+                                                <span class="tag-resultado"></span>
+                                            </div>
+                                        </div>
 
-                                                };
+                                        <div class="linhas">
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill excelente"></div></div>
+                                                <span class="label-card">Excelente <span class="value"></span></span>
+                                            </div>
 
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 6));
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill bom"></div></div>
+                                                <span class="label-card">Bom <span class="value"></span></span>
+                                            </div>
 
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill regular"></div></div>
+                                                <span class="label-card">Regular <span class="value"></span></span>
+                                            </div>
 
-                                    </div>
-                                    <div id="content-grafico">
-                                        <h1>7 - teste 2</h1>
-                                        <div id="piechart7" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill ruim"></div></div>
+                                                <span class="label-card">Ruim <span class="value"></span></span>
+                                            </div>
 
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 1], ["Ruim", 1], ["Razo\u00e1vel", 0], ["Bom", 0], ["Excelente", 1]]);
+                                            <div class="linha">
+                                                <div class="barra"><div class="fill pessimo"></div></div>
+                                                <span class="label-card">Péssimo <span class="value"></span></span>
+                                            </div>
 
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
-
-                                                };
-
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 7));
-
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
-
-                                    </div>
-                                    <div id="content-grafico">
-                                        <h1>8 - teste3</h1>
-                                        <div id="piechart8" style="width: 700x; height: 400px;"></div>
-                                        <script>
-                                            google.setOnLoadCallback(drawChart);
-                                            function drawChart() {
-
-                                                var data = google.visualization.arrayToDataTable([["Pesquisa", "Resultado"], ["P\u00e9ssimo", 0], ["Ruim", 0], ["Razo\u00e1vel", 0], ["Bom", 0], ["Excelente", 1]]);
-
-                                                var options = {
-                                                    title: '',
-                                                    pieHole: 0.4,
-
-                                                };
-
-                                                var chart = new google.visualization.PieChart(document.getElementById('piechart' + 8));
-
-                                                chart.draw(data, options);
-                                            }
-                                        </script>
-
+                                        </div>
                                     </div>
                                 </div>
-
-
-
                             </div>
 
                         </div>
@@ -1645,7 +1743,7 @@
             padding-top: 0 !important;
         }
     </style>
-
+    <script src="cards.js"></script>
 </body>
 
 </html>
