@@ -685,7 +685,7 @@ label.crop-label input {
     display: block;
     padding: 25px 91px;
     background-color: #F6F6F6;
-    border-bottom: 1px solid #D9D9D9;
+    border-bottom: 1px solid #D9D9D9 !important;
     margin-bottom: 23px;
     position: fixed;
     left: 250px;
@@ -693,6 +693,11 @@ label.crop-label input {
     z-index: 100;
 }
 
+@media (min-width: 960px) {
+    .__headbar {
+        width: calc(100% - 250px);
+    }
+}
 .__headbar.imasters {
     background-color: #155bab;
     padding: 5px 0;
@@ -4158,3 +4163,193 @@ table:not(.dataTable) {
     background-repeat: no-repeat;
 }
 /* FIM: style table arquivo-modelo-submissao*/
+.botao-geral {
+    cursor: pointer;
+    background: #F9FAFB;
+    border: 1px solid #CDD1D9;
+    color: #1c1c1c;
+    padding: 12px 20px;
+    font-size: 14px;
+    text-decoration: none !important;
+    font-weight: 500;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.resumo-pesquisa {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background: #F7F7F7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.titulo-pesquisa {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #18181B;
+}
+
+.linha-inferior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.linha-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    min-width: 0;
+}
+
+.item-info .label {
+    color: #6b6b6b;
+    display: block;
+    font-size: 12px;
+}
+
+.item-info .valor {
+    color: #2d2d2d;
+    font-size: 13px;
+}
+
+.divider {
+    width: 1px;
+    height: 26px;
+    background: #D3D3D3;
+}
+
+.botoes-resumo {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.botao-resumo {
+    cursor: pointer;
+    background: #F9FAFB;
+    border: 1px solid #CDD1D9;
+    color: #1c1c1c;
+    padding: 10px 25px;
+    font-size: 12px;
+    text-decoration: none !important;
+    font-weight: 600;
+    border-radius: 8px;
+}
+
+.comentarios-pesquisa h2{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.comentarios-pesquisa h2 .qtd-comentarios{
+    color: #777;
+}
+
+.comentarios-wrapper {
+  border: 1px solid #EBEBEB;
+  overflow: hidden;
+  width: 100%;
+  background: #ffffff;
+  font-size: 12px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.comentarios-table-row {
+  display: flex;
+  box-sizing: border-box;
+  min-height: 50px;
+}
+
+.comentarios-table-header {
+  background: #F3F4F6;
+  padding: 0;
+  font-weight: 700;
+  color: #4A4A4A;
+  height: 50px;
+}
+
+.comentarios-table-cell {
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EEE;
+  display: flex;
+  align-items: center;
+}
+
+.comentarios-wrapper .comentarios-table-row:last-child .comentarios-table-cell {
+  border-bottom: none;
+}
+
+.col-comentario {
+  flex: 0 0 75%;
+  text-align: left;
+}
+
+.col-participante {
+  flex: 0 0 25%;
+  text-align: left;
+}
+
+.comentarios-wrapper .comentarios-table-row:hover .comentarios-table-cell {
+  background: rgba(0,0,0,0.01);
+}
+
+@media (max-width: 680px) {
+
+    .linha-inferior {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+    
+    .linha-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .botoes-resumo {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .botao-resumo {
+        flex: 1;
+        text-align: center;
+    }
+
+    .comentarios-table-cell { 
+        padding: 12px 10px; 
+    }
+
+    .col-comentario { flex: 0 0 70%; }
+    .col-participante { flex: 0 0 30%; }
+
+    .btn-voltar .botao-geral{
+        display: flex;
+        justify-content: center;
+    }
+
+}
