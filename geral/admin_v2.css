@@ -4410,7 +4410,59 @@ table:not(.dataTable) {
   background: rgba(0,0,0,0.01);
 }
 
+.row.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+}
 
+
+.row.buttons .submit input[type="submit"] {
+    background: #FF2B34;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+
+    height: 44px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.row.buttons .submit input[type="submit"]:hover {
+    opacity: 0.9;
+}
+
+.row.buttons .cancel a {
+    background: #F9FAFB;
+    border: 1px solid #CDD1D9;
+    color: #1c1c1c;
+    padding: 0 22px;
+    height: 44px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row.buttons .cancel a:hover {
+    background: #f1f2f4;
+}
+
+.row.buttons .cancel,
+.row.buttons .submit  {
+    padding-top: 0;
+}
 @media (max-width: 680px) {
 
     .linha-inferior {
@@ -4456,5 +4508,26 @@ table:not(.dataTable) {
     .adicionar-pergunta .botao-geral{
         display: flex;
         justify-content: center;
+    }
+
+    .row.buttons {
+        gap: 12px !important;
+    }
+
+    .row.buttons .submit,
+    .row.buttons .cancel {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+    }
+
+    .row.buttons .cancel a,
+    .row.buttons .submit input[type="submit"] {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 }
